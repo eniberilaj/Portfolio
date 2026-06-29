@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Local CAD sample assets — NOT needed at runtime (the wind tunnel ships a built-in
+# procedural car and lets users upload their own .stl/.obj). These files are large
+# (100+ MB) and would exceed GitHub's 100 MB per-file limit.
+CAD/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

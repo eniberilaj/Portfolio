@@ -1,0 +1,16 @@
+# Render blueprint — https://render.com/docs/blueprint-spec
+# One-click deploy: push this repo to GitHub, then on Render choose
+# "New +" → "Blueprint" and point it at the repo.
+services:
+  - type: web
+    name: Portfolio
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # The stdlib server reads $PORT from the environment (see app/server.py).
+    startCommand: python run.py
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
